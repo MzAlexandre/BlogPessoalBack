@@ -55,4 +55,10 @@ public class PostagemController {
 	public void delete(@PathVariable long id) {
 		repository.deleteById(id);
 	}
+	
+	/*
+	 * Author: @MzAlexandre
+	 * Update: 21/02/2022
+	 * 
+	 */
 }
