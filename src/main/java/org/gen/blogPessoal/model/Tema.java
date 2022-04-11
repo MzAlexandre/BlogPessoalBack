@@ -19,15 +19,18 @@ public class Tema {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 
-	@NotNull
+	@NotNull(message = "O atributo Descrição é obrigatório")
 	private String descricao;
 
-	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "tema", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("tema")
 	private List<Postagem> postagem;
-	
+
+
+	/*Insira os Getters and Setters*/
+
 	public long getId() {
 		return id;
 	}
